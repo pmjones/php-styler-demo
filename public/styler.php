@@ -15,4 +15,4 @@ $service = new Service(new Styler(
 ));
 $code = $request->input['original_code'] ?? '';
 $code = $service($code);
-echo htmlspecialchars($code);
+echo htmlspecialchars($code, ENT_QUOTES, 'UTF-8');
