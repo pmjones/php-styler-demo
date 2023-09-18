@@ -1,0 +1,9 @@
+{
+    "require": {
+        "php": "^8.1",
+        "pds/skeleton": "^1.0",
+        "pmjones/php-styler": "0.x-dev",
+        "qiq/qiq": "^2.1",
+        "sapien/sapien": "^1.1"
+    }
+}
