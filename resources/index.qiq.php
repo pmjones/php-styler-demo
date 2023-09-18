@@ -1,8 +1,8 @@
 <html>
 <head>
     <title>PHP-Styler Demo</title>
-    {{= linkStylesheet( 'https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css' ) }}
-    {{= linkStylesheet( 'https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css' ) }}
+    {{= linkStylesheet ( 'https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css' ) }}
+    {{= linkStylesheet ( 'https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css' ) }}
     {{= script ( 'https://unpkg.com/htmx.org@1.9.5' ) }}
     <style>
         body {
