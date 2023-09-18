@@ -1,9 +1,9 @@
 <html>
 <head>
     <title>PHP-Styler Demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.css">
-    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    {{= linkStylesheet( 'https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css' ) }}
+    {{= linkStylesheet( 'https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css' ) }}
+    {{= script ( 'https://unpkg.com/htmx.org@1.9.5' ) }}
     <style>
         body {
             max-width: 80em;
@@ -19,7 +19,7 @@
                 name: 'original_code',
                 hx_post: '/styler.php',
                 hx_target: '#restyled-code',
-                hx_trigger: 'input throttle:500ms',
+                hx_trigger: 'input delay:500ms',
                 value: '<' . '?php',
                 style: 'width: 100%; height: 18em',
             ) }}</p>

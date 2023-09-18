@@ -4,6 +4,8 @@ use PhpStyler\Styler;
 use PhpStyler\Service;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
+error_reporting(E_ALL);
+ini_set('display_errors', true);
 $request = new Request();
 $service = new Service(new Styler(
     eol: "\n",
