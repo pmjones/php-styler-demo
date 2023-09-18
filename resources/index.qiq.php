@@ -13,7 +13,8 @@
 <body>
     <header><h1>PHP-Styler Demo</h1>
     <main>
-        <p>Paste your code below:</p>
+        <p><a href="https://github.com/pmjones/php-styler">PHP-Styler</a> is a companion to <a href="https://github.com/nikic/PHP-Parser">PHP-Parser</a> for reconstructing PHP code after it has been deconstructed into an abstract syntax tree.</p>
+        <p>Try it out yourself! Paste your code below, and in a moment PHP-Styler will reformat it below.</p>
         {{= form ( method: "post" ) }}
             <p>{{= textarea (
                 name: 'original_code',
@@ -26,34 +27,32 @@
             <p>
                 <label>Line Length: {{= select (
                     name: 'line_len',
-                    value: '88',
+                    value: 88,
                     options: [
-                        '80' => '80',
-                        '88' => '88',
-                        '100' => '100',
-                        '110' => '110',
-                        '120' => '120',
-                        '132' => '132',
-                        '150' => '150',
-                        '165' => '165',
+                        80 => 80,
+                        88 => 88,
+                        100 => 100,
+                        110 => 110,
+                        120 => 120,
+                        132 => 132,
+                        150 => 150,
+                        165 => 165,
                     ],
                     hx_post: '/styler.php',
                     hx_target: '#restyled-code',
-                    hx_trigger: 'change',
                 ) }}</label>
                 &nbsp;
                 <label>Indent length: {{= select (
                     name: 'indent_len',
-                    value: '4',
+                    value: 4,
                     options: [
-                        '2' => '2',
-                        '4' => '4',
-                        '6' => '6',
-                        '8' => '8',
+                        2 => 2,
+                        4 => 4,
+                        6 => 6,
+                        8 => 8,
                     ],
                     hx_post: '/styler.php',
                     hx_target: '#restyled-code',
-                    hx_trigger: 'change',
                 ) }}</label>
                 &nbsp;
                 <label>Use tabs? {{= checkboxField (
@@ -61,7 +60,6 @@
                     value: 1,
                     hx_post: '/styler.php',
                     hx_target: '#restyled-code',
-                    hx_trigger: 'change',
                 ) }}</label>
             </p>
         </form>
