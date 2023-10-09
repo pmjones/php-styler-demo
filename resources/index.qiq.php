@@ -8,12 +8,21 @@
         body {
             max-width: 80em;
         }
+
+        img#logo {
+          display: block;
+          height: 120px;
+          margin-left: auto;
+          margin-right: auto;
+        }
     </style>
 </head>
 <body>
-    <header><h1>PHP-Styler Demo</h1>
+    <header>
+        <img id="logo" src="/php-styler.png" />
+    </header>
     <main>
-        <p><a href="https://github.com/pmjones/php-styler">PHP-Styler</a> is a companion to PHP-Parser for reconstructing PHP code after it has been deconstructed into an abstract syntax tree. (You can find <a href="https://github.com/pmjones/php-styler-demo">this demo code on Github.</a>)</p>
+        <p><a href="https://github.com/pmjones/php-styler">PHP-Styler</a> is a companion to PHP-Parser for reconstructing PHP code after it has been deconstructed into an abstract syntax tree. (You can find <a href="https://github.com/pmjones/php-styler-demo">the code for this demo site</a> on Github.)</p>
         <p>Try out PHP-Styler for yourself! Paste in your code, and in a moment PHP-Styler will reformat it below.</p>
         {{= form ( method: "post" ) }}
             <p>{{= textarea (
