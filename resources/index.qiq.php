@@ -3,6 +3,7 @@
     <title>PHP-Styler Demo</title>
     {{= linkStylesheet ( 'https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css' ) }}
     {{= linkStylesheet ( 'https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css' ) }}
+    {{= linkStylesheet ( 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/stackoverflow-light.min.css' ) }}
     {{= script ( 'https://unpkg.com/htmx.org@1.9.5' ) }}
     <style>
         body {
@@ -29,7 +30,7 @@
                 name: 'original_code',
                 hx_post: '/styler.php',
                 hx_target: '#restyled-code',
-                hx_trigger: 'input delay:500ms',
+                hx_trigger: 'input delay:200ms',
                 value: '<' . '?php',
                 style: 'width: 100%; height: 18em',
             ) }}</p>
@@ -72,7 +73,7 @@
                 ) }}</label>
             </p>
         </form>
-        <pre id="restyled-code">&lt;?php</pre>
+        <pre id="restyled-code" class="hljs php">&lt;?php</pre>
     </main>
 </body>
 </html>

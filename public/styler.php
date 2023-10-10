@@ -15,4 +15,6 @@ $service = new Service(new Styler(
 ));
 $code = $request->input['original_code'] ?? '';
 $code = $service($code);
-echo htmlspecialchars($code, ENT_QUOTES, 'UTF-8');
+$highlighter = new \Highlight\Highlighter();
+$highlighted = $highlighter->highlight('php', $code);
+echo $highlighted->value;
