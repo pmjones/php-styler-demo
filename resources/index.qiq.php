@@ -37,10 +37,10 @@
             <p>
                 <label>Line Length: {{= select (
                     name: 'line_len',
-                    value: 88,
+                    value: 84,
                     options: [
                         80 => 80,
-                        88 => 88,
+                        84 => 84,
                         100 => 100,
                         110 => 110,
                         120 => 120,
