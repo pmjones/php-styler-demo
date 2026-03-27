@@ -1,7 +1,7 @@
 <?php
 use Sapien\Request;
 use PhpStyler\Styler;
-use PhpStyler\Format\PlainFormat;
+use PhpStyler\Format\DeclarationFormat;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 error_reporting(E_ALL);
@@ -9,7 +9,7 @@ ini_set('display_errors', true);
 $request = new Request();
 
 $styler = new Styler(
-    new PlainFormat(
+    new DeclarationFormat(
         eol: "\n",
         lineLen: (int) ($request->input['line_len'] ?? 88),
         indentLen: (int) ($request->input['indent_len'] ?? 4),
